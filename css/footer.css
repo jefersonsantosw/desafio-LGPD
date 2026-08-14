@@ -1,0 +1,42 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b357e;
+    height: 75px;
+    color: white;
+    padding: 20px;
+}
+
+footer div{
+    flex: 30%;
+}
+
+.footer-esquerda {
+    display: flex;
+    align-items: center;
+}
+
+.footer-meio {
+    text-align: center;
+}
+
+.footer-direita {
+    text-align: end;
+}
+
+@media (max-width:480px){
+
+    footer{
+        height: 200px;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    footer div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
