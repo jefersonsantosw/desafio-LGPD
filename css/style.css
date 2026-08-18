@@ -204,6 +204,34 @@ iframe {
     resize: vertical;
 }
 
+.consentimento-texto {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 4px 0 0;
+}
+
+.consentimento-opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #3d3d3d;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.consentimento-opcao input {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    width: 16px;
+    height: 16px;
+    accent-color: #1351d8;
+}
+
+.consentimento-opcao a {
+    color: #1351d8;
+}
+
 .contato-form select:invalid {
     color: #7e7e7e;
 }
@@ -222,6 +250,15 @@ iframe {
 
 .contato-form button:hover {
     background-color: #3978ff;
+}
+
+.contato-form button:disabled {
+    background-color: #aeb6c4;
+    cursor: not-allowed;
+}
+
+.contato-form button:disabled:hover {
+    background-color: #aeb6c4;
 }
 
 @media (max-width: 480px) {

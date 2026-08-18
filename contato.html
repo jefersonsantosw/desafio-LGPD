@@ -42,7 +42,16 @@
                         <option value="solicitacao">SOLICITAÇÃO</option>
                     </select>
                     <textarea id="mensagem" name="mensagem" placeholder="MENSAGEM" rows="5" required></textarea>
-                    <button type="submit" onclick="Enviar(event)">Enviar</button>
+                    <p class="consentimento-texto">Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A qualquer momento, será possível editar ou remover tais dados.</p>
+                    <label class="consentimento-opcao">
+                        <input id="aceiteTermos" name="aceiteTermos" type="checkbox" required>
+                        <span>Sim. Li e concordo com os <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições</a>.</span>
+                    </label>
+                    <label class="consentimento-opcao">
+                        <input id="receberNovidades" name="receberNovidades" type="checkbox">
+                        <span>Sim. Também quero receber descontos e novidades.</span>
+                    </label>
+                    <button id="btnEnviar" type="submit" onclick="Enviar(event)" disabled>Enviar</button>
                 </form>
             </div>
         </section>

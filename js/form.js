@@ -37,7 +37,18 @@ function Enviar(event) {
         return;
     }
 
-    var nome = form.elements.namedItem("nome").value;
+    const aceiteTermos = form.elements.namedItem("aceiteTermos");
+    if (!aceiteTermos.checked) {
+        alert("É necessário aceitar os Termos e Condições para enviar o formulário.");
+        return;
+    }
+
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    const nome = form.elements.namedItem("nome").value;
 
     if (nome !== "") {
         const data = Post(form);
@@ -46,3 +57,15 @@ function Enviar(event) {
         form.reset();
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formContato");
+    const aceiteTermos = document.getElementById("aceiteTermos");
+    const btnEnviar = document.getElementById("btnEnviar");
+
+    if (!form || !aceiteTermos || !btnEnviar) return;
+
+    aceiteTermos.addEventListener("change", function () {
+        btnEnviar.disabled = !aceiteTermos.checked;
+    });
+});
